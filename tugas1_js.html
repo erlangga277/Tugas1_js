@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 1 - Javascript</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #6b98cc;
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    
+    h1 {
+      text-align: center;
+      color: #1e293b;
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    hr {
+      border: 0;
+      height: 3px;
+      background: #e2e8f0;
+      margin-bottom: 20px;
+    }
+
+    .card-result {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card-result h3 {
+      margin: 0 0 10px 0;
+      color: #1e293b;
+      font-size: 16px;
+    }
+
+    .card-result p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .highlight-result {
+      font-weight: bold;
+      color: #059669;
+      background-color: #d1fae5;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <script>
+      // 1. Fungsi Menhitung Luas Persegi Panjang
+      // Rumus: Panjang x Lebar
+      function hitungLuasPersegiPanjang(panjang, lebar) {
+        // Menggunakan operator aritmatika perkalian (*)
+        let luas = panjang * lebar;
+        return luas;
+      }
+
+      // 2. Fungsi Menhitung Luas Bujur Sangkar (Persegi)
+      // Rumus: Sisi x Sisi
+      function hitungLuasBujurSangkar(sisi) {
+        // Menggunakan operator aritmatika perkalian (*)
+        let luas = sisi * sisi;
+        return luas;
+      }
+
+      // 3. Fungsi Menhitung Luas Segitiga
+      // Rumus: 0.5 x Alas x Tinggi
+      function hitungLuasSegitiga(alas, tinggi) {
+        // Menggunakan operator aritmatika perkalian (*)
+        let luas = 0.5 * alas * tinggi;
+        return luas;
+      }
+
+     
+      // Inisialisasi Variabel Input
+      let panjang = 10;
+      let lebar = 5;
+
+      let sisi = 4;
+
+      let alas = 8;
+      let tinggi = 6;
+
+      // Memanggil fungsi dan menyimpan hasil ke dalam variabel
+      let luasPersegiPanjang = hitungLuasPersegiPanjang(panjang, lebar);
+      let luasBujurSangkar = hitungLuasBujurSangkar(sisi);
+      let luasSegitiga = hitungLuasSegitiga(alas, tinggi);
+
+      // Cetak Output ke Halaman Browser menggunakan document.write()
+      document.write("<h1>Perhitungan Luas Bangun Datar</h1><hr/>");
+
+      // Cetak Hasil 1: Persegi Panjang
+      document.write("<div class='card-result'>");
+      document.write("<h3>1. Luas Persegi Panjang</h3>");
+      document.write("<p>Panjang: " + panjang + "</p>");
+      document.write("<p>Lebar: " + lebar + "</p>");
+      document.write("<p><b>Hasil Luas: <span class='highlight-result'>" + luasPersegiPanjang + "</span></b></p>");
+      document.write("</div>");
+
+      // Cetak Hasil 2: Bujur Sangkar
+      document.write("<div class='card-result'>");
+      document.write("<h3>2. Luas Bujur Sangkar</h3>");
+      document.write("<p>Sisi: " + sisi + "</p>");
+      document.write("<p><b>Hasil Luas: <span class='highlight-result'>" + luasBujurSangkar + "</span></b></p>");
+      document.write("</div>");
+
+      // Cetak Hasil 3: Segitiga
+      document.write("<div class='card-result'>");
+      document.write("<h3>3. Luas Segitiga</h3>");
+      document.write("<p>Alas: " + alas + "</p>");
+      document.write("<p>Tinggi: " + tinggi + "</p>");
+      document.write("<p><b>Hasil Luas: <span class='highlight-result'>" + luasSegitiga + "</span></b></p>");
+      document.write("</div>");
+    </script>
+  </div>
+
+</body>
+</html>
